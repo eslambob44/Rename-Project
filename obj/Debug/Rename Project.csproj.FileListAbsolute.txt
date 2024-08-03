@@ -1,0 +1,14 @@
+D:\programmin\first jorney\Rename Project\bin\Debug\Rename Project.exe.config
+D:\programmin\first jorney\Rename Project\bin\Debug\Rename Project.exe
+D:\programmin\first jorney\Rename Project\bin\Debug\Rename Project.pdb
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename Project.csproj.AssemblyReference.cache
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename_Project.Form1.resources
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename_Project.Properties.Resources.resources
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename Project.csproj.GenerateResource.cache
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename Project.csproj.CoreCompileInputs.cache
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename Project.exe
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename Project.pdb
+D:\programmin\first jorney\Rename Project\bin\Debug\Rename Project.exe.manifest
+D:\programmin\first jorney\Rename Project\bin\Debug\Rename Project.application
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename Project.exe.manifest
+D:\programmin\first jorney\Rename Project\obj\Debug\Rename Project.application
