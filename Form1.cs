@@ -19,6 +19,90 @@ namespace Rename_Project
             InitializeComponent();
         }
 
+        enum enFilesImages { Folder=0,NotePad=1,Vlc=2,None=3,WinRAR=4,Pdf=5};
+
+
+
+        void AddImageToFileTreeNode(TreeNode tn , string FilePath)
+        {
+            
+            string FileExtension = Path.GetExtension(FilePath);
+            switch(FileExtension)
+            {
+                case ".txt":
+                    tn.ImageIndex=(int)enFilesImages.NotePad; 
+                    break;
+                case ".mp4":
+                case ".mp3":
+                    tn.ImageIndex=(int)enFilesImages.Vlc; 
+                    break;
+                case ".rar":
+                case ".zip":
+                    tn.ImageIndex = (int)enFilesImages.WinRAR;
+                    break;
+                case ".pdf":
+                    tn.ImageIndex =(int)enFilesImages.Pdf;
+                    break;
+
+                    
+            }
+            tn.SelectedImageIndex = tn.ImageIndex;
+        }
+
+        void AddImageToFolderTreeNode(TreeNode tn)
+        {
+            tn.ImageIndex= (int)enFilesImages.Folder;
+            tn.SelectedImageIndex=tn.ImageIndex;
+        }
+
+        void AddFileToTreeView(string path)
+        {
+            string FileName = Path.GetFileNameWithoutExtension(path);
+            TreeNode tn = new TreeNode(FileName);
+            AddImageToFileTreeNode(tn, path);
+            treeView1.Nodes.Add(tn);
+        }
+
+        string GetFolderName(string FolderPath)
+        {
+            string[] arr= FolderPath.Split('\\');
+            return arr[arr.Length-1];
+        }
+
+        void AddFolderToTreeView(string path)
+        {
+            string FolderName = GetFolderName(path);
+            TreeNode tn = new TreeNode(FolderName);
+            AddImageToFolderTreeNode(tn);
+            treeView1.Nodes.Add(tn);
+        }
+
+        void ShowFilesInTreeView(string FolderDir)
+        {
+            string[] FilesDir = Directory.GetFiles(FolderDir);
+            foreach (string FileDir in FilesDir)
+            {
+                AddFileToTreeView(FileDir);
+            }
+        }
+
+        void ShowSubFoldersInTreeView(string MainFolderDir)
+        {
+            string[] FoldersDir = Directory.GetDirectories(MainFolderDir);
+            foreach(string FolderDir in FoldersDir)
+            {
+                AddFolderToTreeView(FolderDir);
+            }
+        }
+
+        void ShowFilesAndFoldersInTreeView(string FolderDir)
+        {
+            treeView1.Nodes.Clear();
+            ShowFilesInTreeView(FolderDir);
+            ShowSubFoldersInTreeView(FolderDir);
+            
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if(folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -26,6 +110,8 @@ namespace Rename_Project
                 txtOldName.Enabled = true;
                 txtNewName.Enabled = true;
                 btnRenameFiles.Enabled = true;
+                ShowFilesAndFoldersInTreeView(folderBrowserDialog1.SelectedPath);
+                treeView1.Visible = true;
             }
         }
 
@@ -70,6 +156,10 @@ namespace Rename_Project
                 errorProvider1.SetError(txtNewName, "Must enter new name");
                 return;
             }
+            else
+            {
+                errorProvider1.SetError(txtNewName, "");
+            }
 
             if(CheckIfFolderHaveSubFolders(folderBrowserDialog1.SelectedPath))
             {
@@ -86,18 +176,26 @@ namespace Rename_Project
 
             }
             MessageBox.Show("Names replaced Successfully");
-
-
-
-
-
-
-            txtOldName.Enabled = false;
-            txtNewName.Enabled = false;
-            btnRenameFiles.Enabled = false;
+            ShowFilesAndFoldersInTreeView(folderBrowserDialog1.SelectedPath);
             txtOldName.Text = "";
             txtNewName.Clear(); 
 
+
+        }
+
+        private void treeView1_DoubleClick(object sender, EventArgs e)
+        {
+            txtOldName.Text = treeView1.SelectedNode.Text;
+        }
+
+        private void copyTheTextToNewNameTextBoxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtNewName.Text=txtOldName.Text;
+        }
+
+        private void getFolderNameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            txtNewName.Text = GetFolderName(folderBrowserDialog1.SelectedPath);
         }
     }
 }

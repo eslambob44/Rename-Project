@@ -3,18 +3,12 @@
   "WorkspaceRootPath": "D:\\programmin\\first jorney\\Rename Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Rename Project||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C220C30-3EAD-4C61-9730-B1151DD1472B}|Rename Project.csproj|d:\\programmin\\first jorney\\rename project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3C220C30-3EAD-4C61-9730-B1151DD1472B}|Rename Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3C220C30-3EAD-4C61-9730-B1151DD1472B}|Rename Project.csproj|d:\\programmin\\first jorney\\rename project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C220C30-3EAD-4C61-9730-B1151DD1472B}|Rename Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C220C30-3EAD-4C61-9730-B1151DD1472B}|Rename Project.csproj|d:\\programmin\\first jorney\\rename project\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|cc4014f5-b18d-439c-9352-f99d984cca85"
+      "AbsoluteMoniker": "D:0:0:{3C220C30-3EAD-4C61-9730-B1151DD1472B}|Rename Project.csproj|d:\\programmin\\first jorney\\rename project\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3C220C30-3EAD-4C61-9730-B1151DD1472B}|Rename Project.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,26 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Rename Project",
-              "DocumentMoniker": "D:\\programmin\\first jorney\\Rename Project\\Rename Project.csproj",
-              "RelativeDocumentMoniker": "Rename Project.csproj",
-              "ToolTip": "D:\\programmin\\first jorney\\Rename Project\\Rename Project.csproj",
-              "RelativeToolTip": "Rename Project.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-08-03T14:17:05.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\programmin\\first jorney\\Rename Project\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\programmin\\first jorney\\Rename Project\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAIwFIAAAAQAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAADwvywAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T12:55:43.057Z",
+              "WhenOpened": "2024-08-08T20:41:02.975Z",
               "EditorCaption": ""
             },
             {
@@ -60,7 +42,7 @@
               "ToolTip": "D:\\programmin\\first jorney\\Rename Project\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T12:50:38.997Z",
+              "WhenOpened": "2024-08-08T20:40:48.158Z",
               "EditorCaption": " [Design]"
             }
           ]
