@@ -169,6 +169,10 @@ namespace Rename_Project
                 {
                     RenameFilesInSpecificFolderAndSubFolders(folderBrowserDialog1.SelectedPath, txtNewName.Text, txtOldName.Text);
                 }
+                else
+                {
+                    RenameFilesInSpecificFolder(folderBrowserDialog1.SelectedPath, txtNewName.Text, txtOldName.Text);
+                }
             }
             else
             {
@@ -185,7 +189,11 @@ namespace Rename_Project
 
         private void treeView1_DoubleClick(object sender, EventArgs e)
         {
-            txtOldName.Text = treeView1.SelectedNode.Text;
+            if (treeView1.SelectedNode!=null)
+            {
+                txtOldName.Text = treeView1.SelectedNode.Text;
+            }
+            
         }
 
         private void copyTheTextToNewNameTextBoxToolStripMenuItem_Click(object sender, EventArgs e)
